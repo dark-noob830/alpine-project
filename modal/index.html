@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+
+    <title>mahdi</title>
+</head>
+
+<body>
+
+    <div x-data="{show : false}">
+        <button class="btn mt-5" @click="show = true">Click Me!</button>
+
+        <div class="overlay" :class="{'is-visible' : show}"></div>
+        <div class="modal" :class="{'is-visible' : show}">
+            <button class="modal-close-btn" @click="show = false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z" />
+                </svg>
+            </button>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, laudantium unde culpa
+                obcaecati, rem ratione, minus atque ex vitae molestiae saepe cumque, delectus? Qui, dicta,
+                quibusdam. Itaque dignissimos illum, provident
+            </p>
+            <br>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, laudantium unde culpa
+                obcaecati, rem ratione, minus atque ex vitae molestiae saepe cumque, delectus? Qui, dicta,
+                quibusdam. Itaque dignissimos illum, provident
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>

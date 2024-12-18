@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.7/dist/cdn.min.js"></script>
+
+    <title>mahdi</title>
+</head>
+
+<body>
+    <section class="navigation">
+        <div class="nav-container">
+            <div class="brand">
+                <a href="#!">mahdi</a>
+            </div>
+            <nav x-data="dropdown">
+                <div class="nav-mobile">
+                    <a id="nav-toggle" href="#!" @click="toggle">
+                        <span></span>
+                    </a>
+                </div>
+                <ul class="nav-list" x-cloak x-show="open" x-transition.duration.200ms.opacity.scale.origin.top>
+                    <li>
+                        <a href="#!">Home</a>
+                    </li>
+                    <li>
+                        <a href="#!">About</a>
+                    </li>
+                    <li x-data="dropdown">
+                        <a href="#!" @click="toggle" @click.outside="open = false" @keyup.escape="open = false">Services</a>
+                        <ul class="nav-dropdown" x-cloak x-show="open" x-transition.duration.400ms.opacity.scale.origin.top>
+                            <li>
+                                <a href="#!">Web Design</a>
+                            </li>
+                            <li>
+                                <a href="#!">Web Development</a>
+                            </li>
+                            <li>
+                                <a href="#!">Graphic Design</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#!">Pricing</a>
+                    </li>
+                    <li x-data="dropdown">
+                        <a href="#!" @click="toggle" @click.outside="open = false" @keyup.escape="open = false">Portfolio</a>
+                        <ul class="nav-dropdown" x-cloak x-show="open" x-transition.duration.400ms.opacity.scale.origin.top >
+                            <li>
+                                <a href="#!">Web Design</a>
+                            </li>
+                            <li>
+                                <a href="#!">Web Development</a>
+                            </li>
+                            <li>
+                                <a href="#!">Graphic Design</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#!">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <article>
+        <h2 class="mt-5 text-primary">Navigation</h2>
+        <p class="mt-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, vero officia quaerat dicta quasi
+            nam recusandae
+            maxime quibusdam dolores, facere earum reprehenderit inventore libero officiis voluptatibus architecto ad
+            error quidem.</p>
+    </article>
+
+
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('dropdown', () => ({
+                open: false,
+    
+                toggle() {
+                    this.open = ! this.open
+                }
+            }))
+        })
+    </script>
+</body>
+
+</html>

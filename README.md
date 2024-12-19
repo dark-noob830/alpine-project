@@ -1,8 +1,8 @@
-# alpine project
+# alpine simple project
 
 A brief description of what this project does and who it's for
 
-## list of project
+## list of simple project
 
 - [accordion](https://github.com/dark-noob830/alpine-project/tree/main/accordion)
 

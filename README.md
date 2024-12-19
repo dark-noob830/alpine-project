@@ -11,6 +11,8 @@ A brief description of what this project does and who it's for
 - [dropdown](https://github.com/dark-noob830/alpine-project/tree/main/dropdown)
 
 - [modal](https://github.com/dark-noob830/alpine-project/tree/main/modal)
+
+- [multiselect](https://github.com/dark-noob830/alpine-project/tree/main/multiselect)
 with webpack and npm 
 
 - [tabs](https://github.com/dark-noob830/alpine-project/tree/main/tabs)

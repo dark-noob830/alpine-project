@@ -1,0 +1,112 @@
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
+  outline: none;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}
+.msa-wrapper {
+  width: 400px;
+}
+.msa-wrapper:focus-within .input-presentation {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.msa-wrapper > * {
+  display: block;
+  width: 100%;
+}
+.msa-wrapper .input-presentation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  min-height: 40px;
+  padding: 6px 40px 6px 12px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  font-size: 1rem;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.msa-wrapper .input-presentation .placeholder {
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.6);
+}
+.msa-wrapper .input-presentation:after {
+  content: "";
+  border-top: 6px solid black;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  right: 14px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.msa-wrapper .input-presentation.active {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.msa-wrapper .input-presentation .tag-badge {
+  background-color: blueviolet;
+  padding-left: 14px;
+  padding-right: 28px;
+  color: white;
+  border-radius: 14px;
+  position: relative;
+}
+.msa-wrapper .input-presentation .tag-badge span {
+  font-size: 16px;
+  line-height: 27px;
+}
+.msa-wrapper .input-presentation .tag-badge button {
+  display: inline-block;
+  padding: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+  position: absolute;
+  right: 0px;
+  padding-right: 10px;
+  padding-left: 5px;
+  cursor: pointer;
+  line-height: 26px;
+  height: 26px;
+  font-weight: 600;
+}
+.msa-wrapper .input-presentation .tag-badge button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+.msa-wrapper ul {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  border-top: none;
+  list-style: none;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.msa-wrapper ul li {
+  padding: 6px 12px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.msa-wrapper ul li:hover {
+  background: blueviolet;
+  color: white;
+}

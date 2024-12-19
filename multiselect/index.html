@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/css/style.css">
+
+    <script defer src="./dist/js/main.js"></script>
+    <title>WebProg.io</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="msa-wrapper" x-data="multiselect">
+            <label for="msa-input">Choose some cars:</label>
+            <input name="test" x-model="selectedString" type="text" hidden>
+            
+            <div 
+            class="input-presentation" 
+            :class="{'active' : listItemsIsActive}"
+            @click="listItemsIsActive = !listItemsIsActive"
+            @click.outside="listItemsIsActive = false"
+            >
+                <span x-show="selected.length == 0" class="placeholder">Select Tags</span>
+
+                <template x-for="(item ,index) in selected" :key="index">
+                    <div class="tag-badge">
+                        <span x-text="item"></span>
+                        <button @click.stop="remove(item)">x</button>
+                    </div>
+                </template>
+
+            </div>
+            <ul x-show="listItemsIsActive" x-transition>
+                <template x-for="(item , index) in items" :key="index">
+                    <li x-show="!selected.includes(item)" x-text="item" @click.stop="add(item)"></li>
+                </template>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+
+</html>

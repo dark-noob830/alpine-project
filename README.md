@@ -19,4 +19,4 @@ with webpack and npm
 
 ## api 
 using bootstrap : 
-- [api](https://github.com/dark-noob830/alpine-project/tree/main/tapiabs)
+- [api](https://github.com/dark-noob830/alpine-project/tree/main/api)

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.7/dist/cdn.min.js"></script>
+    <title>mahdi</title>
+</head>
+
+<body>
+
+    <div class="box" x-data="{ tab : 'num1' }">
+        <div class="container">
+            <div class="wrapper">
+                <button class="toggle" @click="tab = 'num1'">What is the return Policy?
+
+                    <template x-if="tab === 'num1'">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-dash-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7z" />
+                        </svg>
+                    </template>
+
+                    <template x-if="tab !== 'num1'">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+                        </svg>
+                    </template>
+
+                </button>
+                <div class="content" :class="{ 'open' : tab === 'num1' }">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, unde
+                        molestiae! Sit laboriosam nisi minus, accusamus sapiente cumque tenetur mollitia voluptate quis
+                        provident dolores facilis ad, omnis cupiditate temporibus repellat! Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Reprehenderit impedit aliquid autem facilis vel, officia
+                        consectetur laudantium aut animi maiores, amet facere pariatur suscipit dolorem commodi a,
+                        maxime repellendus quidem!</p>
+                </div>
+            </div>
+            <div class="wrapper">
+                <button class="toggle" @click="tab = 'num2'">How can I apply the coupon?
+
+                    <template x-if="tab === 'num2'">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-dash-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7z" />
+                        </svg>
+                    </template>
+
+                    <template x-if="tab !== 'num2'">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+                        </svg>
+                    </template>
+
+                </button>
+                <div class="content" :class="{ 'open' : tab === 'num2' }">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, laudantium unde culpa
+                        obcaecati, rem ratione, minus atque ex vitae molestiae saepe cumque, delectus? Qui, dicta,
+                        quibusdam. Itaque dignissimos illum, provident?</p>
+                </div>
+            </div>
+            <div class="wrapper">
+                <button class="toggle" @click="tab = 'num3'">How do I become a member?
+
+                    <template x-if="tab === 'num3'">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-dash-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7z" />
+                        </svg>
+                    </template>
+
+                    <template x-if="tab !== 'num3'">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+                        </svg>
+                    </template>
+
+                </button>
+                <div class="content" :class="{ 'open' : tab === 'num3' }">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ad rem sunt quas omnis ipsa
+                        commodi nihil excepturi a illum tempora doloremque amet accusantium temporibus, reprehenderit
+                        beatae! Accusamus, amet, iste.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
